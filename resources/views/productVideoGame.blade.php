@@ -5,7 +5,7 @@
 <section id="product">
     <div class="container-fluid px-0">
 
-        <div class="container-fluid bg-dark">
+        <div class="container-fluid bg-dark pb-2">
             <!-- breadcrumbs -->
             <div class="row">
                 <nav aria-label="breadcrumb">
@@ -18,7 +18,7 @@
             </div>
             <div class="row px-5">
                 <h4 class="text-white font-weight-bold mb-0">Activision Call of Duty: Black Ops 4 (Playstation 4)</h4>
-            </div>  
+            </div>
             <div class="row calif1 justify-content-start align-items-center px-5 py-3">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -33,62 +33,95 @@
         <!-- contenido producto -->
         <div class="d-flex flex-md-row flex-column" id="productVGCont">
 
-            <!-- columna 1 / slider producto -->
+            <div class="container" id="portrait">
+                <img src="{{URL::asset('img/codportada.png')}}">
+            </div>
 
-            <!-- <div class="product-slider order-2 order-md-1 col-md px-0">
-                <div id="sliderProduct" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner mt-1">
-                        <div class="carousel-item active"> <img class="w-100 sliderPS img-fluid"> </div>
-                        <div class="carousel-item"> <img class="w-100 sliderPS img-fluid"> </div>
-                        <div class="carousel-item"> <img class="w-100 sliderPS img-fluid"> </div>
-                        <div class="carousel-item"> <img class="w-100 sliderPS img-fluid"> </div>
-                        <div class="carousel-item"> <img class="w-100 sliderPS img-fluid"> </div>
-                    </div>
+            <div class="container d-flex justify-content-around px-0" id="sliderVG">
+                <div class="bg-white p-1">
+                    <img src="{{URL::asset('https://picsum.photos/170/100/?random&image=0')}}">
                 </div>
-                <div class="clearfix ml-3">
-                    <div id="thumbcarousel" class="carousel slide" data-interval="false">
-                        <div class="carousel-inner">
-                            <div class="carousel-item item active">
-                                <div data-target="#sliderProduct" data-slide-to="0" class="thumb my-1 mt-md-2"><img src="{{URL::asset('img/sliderLiS1.png')}}"></div>
-                                <div data-target="#sliderProduct" data-slide-to="1" class="thumb my-1 mt-md-2"><img src="{{URL::asset('img/sliderLiS2.png')}}"></div>
-                                <div data-target="#sliderProduct" data-slide-to="2" class="thumb my-1 mt-md-2"><img src="{{URL::asset('img/sliderLiS3.png')}}"></div>
-                                <div data-target="#sliderProduct" data-slide-to="3" class="thumb my-1 mt-md-2"><img src="{{URL::asset('img/sliderLiS4.png')}}"></div>
-                                <div data-target="#sliderProduct" data-slide-to="4" class="thumb my-1 mt-md-2"><img src="{{URL::asset('img/sliderLiS5.png')}}"></div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="bg-white p-1">
+                    <img src="{{URL::asset('https://picsum.photos/170/100/?random&image=1')}}">
                 </div>
-            </div> -->
+                <div class="bg-white p-1">
+                    <img src="{{URL::asset('https://picsum.photos/170/100/?random&image=2')}}">
+                </div>
+            </div>
 
             <!-- columna 3 -->
             <div class="col-md-4 px-0" id="column3VG">
                 <!-- preforma -->
-                <div class="container mb-2" id="preform">
+                <div class="container" id="preform">
                     <div class="row px-3"><span class="text-warning">S/ 98.96</span></div>
                     <div class="row px-3">Envío gratis</div>
-                    <div class="row px-3 mb-2">Vendido por <span class="text-primary"> St3 Group </span> y enviado por
-                        <span class="text-primary">Shoptivate.</span> Se puede envolver para regalo</div>
-                    <button class="btn btn-block btn-warning text-white">Agregar al carrito</button>
-                    <button class="btn btn-block btn-secondary text-white">Comprar ahora con 1-Click</button>
+                    <div class="row px-3 mb-2">
+                        Vendido por <span class="text-primary"> St3 Group </span> y enviado por
+                        <span class="text-primary">Shoptivate.</span> Se puede envolver para regalo
+                    </div>
+                    <div class="row justify-content-start mt-2 pt-2 mx-1">
+                        <button class="btn btn-block btn-outline-dark text-left" type="button" id="platform"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="font-weight-bold">
+                                Plataforma
+                                <img src="{{URL::asset('img/ps4.png')}}" alt="PS4" class="d-block">
+                            </div>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="platform">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                    <div class="row justify-content-start mt-2 pt-2 mx-1">
+                        <button class="btn btn-block btn-outline-dark text-left py-2" type="button" id="edition"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="font-weight-bold">
+                                Edición
+                                <div class="d-block font-weight-normal">Standard</div>
+                            </div>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="edition">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                    <div class="input-group" id="quantityPGroup">
+                        <select class="custom-select rounded-0 rounded-left py-3" id="quantityProduct">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <div class="input-group-append">
+                            <label class="input-group-text p-0" for="quantityProduct">
+                                <button class="btn btn-warning text-white rounded-0 py-3">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Agregar
+                                </button>
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn btn-block btn-secondary text-white py-3">Comprar ahora con 1-Click</button>
                     <div class="row borderbGray justify-content-start py-3 mx-1">
                         <div class="form-check">
-                            <input type="checkbox" name="" id="gift" class="form-check-input">
-                            <label class="form-check-label preformFS" for="gift">
+                            <input type="checkbox" name="" id="isGift" class="form-check-input">
+                            <label class="form-check-label preformFS" for="isGift">
                                 Es un regalo
                             </label>
                         </div>
                     </div>
                     <div class="row justify-content-center borderbGray mx-1 py-2">
                         <div class="ubicM">
-                            <div class="row">
+                            <div class="row py-3">
                                 <i class="fas fa-map-marker-alt text-bold mr-2"></i>
                                 <span class="preformFS">Enviar a ROBERT - Lima 33192</span>
                             </div>
                         </div>
                     </div>
-                    <div class="row justify-content-center mt-2 pt-2 mx-1">
-                        <button class="btn btn-block btn-outline-secondary dropdown-toggle" type="button" id="list"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="row justify-content-center mt-4 pt-2 mx-1">
+                        <button class="btn btn-block btn-outline-secondary py-3" type="button" id="list" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
                             Agregar a la Lista
                         </button>
                         <div class="dropdown-menu" aria-labelledby="list">
@@ -98,23 +131,20 @@
                         </div>
                     </div>
                 </div>
-                <!-- medios de pago -->
-                <div class="container mt-2 brandsFS">
-                    <div class="row justify-content-around p-2">
-                        <span class="br-paypal"></span>
-                        <span class="br-visa"></span>
-                        <span class="br-mastercard"></span>
-                        <span class="br-applepay"></span>
-                    </div>
-                    <div class="row justify-content-around p-2">
-                        <span class="br-tesla"></span>
-                        <span class="br-etsy"></span>
-                        <span class="br-behance"></span>
-                        <span class="br-hatenabookmark"></span>
-                    </div>
-                </div>
             </div>
 
+            <!-- Acerca del producto -->
+            <div class="container-fluid bg-white border mx-5" id="aboutVG">
+                <div>
+                    Acerca del producto
+                </div>
+                <ul class="py-3">
+                    <li>Call of Duty(R): Points (CP) will be accessible in Call of Duty(R): Black Ops 4 once CP are
+                        available in game. Platform and region availability may vary and are subject to change.</li>
+                    <li>Internet Connection, Blizzard(R) Battle.net(R) Desktop app and registration required to play</li>
+                    <li>Any applicable VAT included</li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>

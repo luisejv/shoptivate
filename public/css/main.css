@@ -739,18 +739,99 @@ button[aria-expanded=true] span:before {
 }
 #product #productVGCont {
   background-image: url('/img/codbo.jpg');
-  position: absolute;
-  min-height: 100%;
-  width: 100%;
+  position: relative;
   background-size: cover;
-  z-index: 1000;
+  width: 100%;
+  height: 120vh;
+  margin-bottom: 340px;
 }
-#product #column3VG {
+#product #productVGCont #column3VG {
   background-color: #fff;
   position: absolute;
   top: 30px;
-  left: 850px;
-  z-index: 1001;
+  font-size: 1.1rem;
+  right: 40px;
+  font-weight: bold;
+}
+#product #productVGCont #column3VG #preform {
+  padding: 2rem 2.5rem;
+}
+#product #productVGCont #column3VG #preform span.text-warning {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+#product #productVGCont #column3VG #preform button[aria-expanded=false]:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "\f107";
+  float: right;
+  transition: all 0.5s;
+  transform: rotate(0deg) scale(2, 1.8);
+  -webkit-transform: rotate(0deg) scale(2, 1.8);
+  -moz-transform: rotate(0deg) scale(2, 1.8);
+  margin-top: 5%;
+  margin-right: 10px;
+}
+#product #productVGCont #column3VG #preform button[aria-expanded=true]:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "\f107";
+  float: right;
+  transition: all 0.5s;
+  -webkit-transform: rotate(-90deg) scale(2, 1.8);
+  -moz-transform: rotate(-90deg) scale(2, 1.8);
+  transform: rotate(-90deg) scale(2, 1.8);
+  margin-top: 5%;
+  margin-right: 10px;
+}
+#product #productVGCont #column3VG #preform #edition:before {
+  margin-top: 4%;
+}
+#product #productVGCont #column3VG #preform #list:before {
+  margin-top: auto;
+}
+#product #productVGCont #column3VG #preform #quantityPGroup {
+  margin: 1rem 0;
+}
+#product #productVGCont #column3VG #preform .custom-select {
+  height: 100%;
+}
+#product #productVGCont #column3VG #preform #isGift {
+  margin-top: 0.55rem;
+}
+#product #productVGCont #column3VG #preform .ubicM span {
+  font-size: 1.2rem;
+}
+#product #productVGCont #column3VG #preform .ubicM i {
+  font-size: 1.5rem;
+  padding-top: 0.2rem;
+}
+#product #productVGCont #portrait {
+  position: absolute;
+  bottom: -100px;
+  left: 30px;
+}
+#product #productVGCont #sliderVG {
+  position: absolute;
+  bottom: -48px;
+  left: 300px;
+  width: 550px;
+}
+#product #productVGCont #aboutVG {
+  position: absolute;
+  top: 140vh;
+  max-width: 92.8%;
+  padding: 0;
+}
+#product #productVGCont #aboutVG li {
+  font-size: 1.1rem;
+}
+#product #productVGCont #aboutVG div {
+  padding: 0.7rem 2rem;
+  margin: 0;
+  border-bottom: 1px solid #bebebe;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 #specCont {
   width: 90%;
@@ -759,10 +840,6 @@ button[aria-expanded=true] span:before {
 }
 #specifications {
   background-color: #e9eded;
-}
-#specifications.specVG {
-  position: absolute;
-  top: 160%;
 }
 #specifications .infoHead {
   position: relative;
@@ -813,6 +890,9 @@ button[aria-expanded=true] span:before {
 #specifications .nav-item {
   width: 25%;
   text-align: center;
+}
+#productList {
+  background-color: #fff;
 }
 @media screen and (min-width: 768px) {
   #offer {
